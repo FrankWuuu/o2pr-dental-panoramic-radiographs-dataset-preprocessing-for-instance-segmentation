@@ -1,9 +1,9 @@
 import json
 
-# json_name = 'train.json'
+# json_name = 'train.json'  # path to Dataset and code test.json
 # csv_dst = 'train_lists.csv'
 
-json_name = 'test.json'
+json_name = 'test.json' # path to Dataset and code test.json
 csv_dst = 'test_lists.csv'
 
 with open(json_name) as json_file:
