@@ -1,10 +1,10 @@
 import shutil
 import os
 
-# path = "o2pr/train/images/"
+# path = "o2pr/train/images/" # path to Dataset and code train images
 # file_name = "train_lists.csv"
 
-path = "o2pr/test/images/"
+path = "o2pr/test/images/"  # path to Dataset and code test images
 file_name = "test_lists.csv"
 
 name_lists_json = []
