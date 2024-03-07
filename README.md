@@ -4,9 +4,14 @@ If you find it helpful, please consider giving it a star🌟.
 
 We mainly use the "Dataset and code" for the instance segmentation. 
 
-But there are some problems in the `train.json` and `test.json` files. 
+This repository means to convert the `train.json` RLE annotation to a coco polygon annotation format by our `rle_convert_2_polygon.py`.
+
+
+Maybe there are some problems in the `train.json` and `test.json` files. 
 The main problem is that not all the images are included in the annotation files. 
-So we decide to remove the images that not in the json.
+You could remove the images that are not in the json by using our `remove_imgs_not_in_json.py`.
+But it is ok if you have nothing to do with it.
+
 - ## 1. Dataset source
 These datasets come from the paper ["Children’s dental panoramic radiographs dataset"](https://www.nature.com/articles/s41597-023-02237-5)[1]. They claim that the "dataset and code" are from [2].
 You can obtain these datasets from the publication references.
