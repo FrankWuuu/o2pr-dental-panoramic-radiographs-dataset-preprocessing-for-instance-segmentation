@@ -46,7 +46,3 @@ You can obtain these datasets from the publication references.
 [1] Zhang, Yifan, et al. "Children’s dental panoramic radiographs dataset for caries segmentation and dental disease detection." Scientific Data 10.1 (2023): 380.
 
 [2] Silva, Gil, Luciano Oliveira, and Matheus Pithon. "Automatic segmenting teeth in X-ray images: Trends, a novel data set, benchmarking and future perspectives." Expert Systems with Applications 107 (2018): 15-31.
-
-
-    
-    
