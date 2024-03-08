@@ -4,13 +4,17 @@ If you find it helpful, please consider giving it a star🌟.
 
 We mainly use the "Dataset and code" for the instance segmentation. 
 
-This repository means to convert the `train.json` RLE annotation to a coco polygon annotation format by our `rle_convert_2_polygon.py`.
+In the original dataset, there are differences in the annotation formats between `test.json` and `train.json`. `test.json` is in the format of `list[list[float]]`, while `train.json` is in the format of `dict`.
+The differences in format could be related to the [Detectron2 Standard Dataset Dicts](https://detectron2.readthedocs.io/en/latest/tutorials/datasets.html#standard-dataset-dicts).
+>[!NOTE]
+>The format of `dict` in `train.json` is the uncompressed RLE.
+
+This repository means to convert the `train.json` uncompressed RLE annotation to a coco polygon annotation format `list[list[float]]` by our `rle_convert_2_polygon.py`.
+
+There may be some issues with the original `train.json` and `test.json` files. The primary concern is that not all images are included in the annotation files.
+You can eliminate the images not present in the JSON files using our `remove_imgs_not_in_json.py` script. However, it's alright if you don't need to do that.
 
 
-Maybe there are some problems in the `train.json` and `test.json` files. 
-The main problem is that not all the images are included in the annotation files. 
-You could remove the images that are not in the json by using our `remove_imgs_not_in_json.py`.
-But it is ok if you have nothing to do with it.
 
 - ## 1. Dataset source
 These datasets come from the paper ["Children’s dental panoramic radiographs dataset"](https://www.nature.com/articles/s41597-023-02237-5)[1]. They claim that the "dataset and code" are from [2].
