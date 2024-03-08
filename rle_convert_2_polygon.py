@@ -50,9 +50,6 @@ for i in range(len_anno):
     # for j in range(9):
     #  print(poly_lists_coco[j])
       poly = poly_lists_coco[j]
-      if len(poly) < 6:
-        print(" small ###")
-
       com_rle = mask_util.frPyObjects([poly],img_size[0], img_size[1])
       d_mask = mask_util.decode(com_rle) # mask
       poly_lists = polygonFromMask(d_mask)
@@ -65,9 +62,9 @@ for i in range(len_anno):
                   "iscrowd": 0,
               }
       new_anno["segmentation"] = poly_lists
-      aaa = mask_util.area(com_rle)[0]
-      # print("area:",aaa)
-      new_anno["area"] = int(aaa)
+      area_new = mask_util.area(com_rle)[0]
+      # print("area:",area_new)
+      new_anno["area"] = int(area_new)
       # print(mask_util.area(com_rle))
       bbox = mask_util.toBbox(com_rle)[0]
       bbox = bbox.astype(int)
