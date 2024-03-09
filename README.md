@@ -2,14 +2,16 @@
 
 If you find it helpful, please consider giving it a star🌟.
 
-We mainly use the "Dataset and code" for the instance segmentation. 
+We mainly use the `"Dataset and code"` for the instance segmentation. 
+Upon inspection, we discovered that the `train.json` is annotated for semantic segmentation, lacking tooth instance annotations required for instance segmentation. 
+Hence, we solely rely on the `test.json` for instance segmentation purposes. 
+For those conducting research on semantic segmentation, this dataset proves to be quite useful.
 
 In the original dataset, there are differences in the annotation formats between `test.json` and `train.json`. `test.json` is in the format of `list[list[float]]`, while `train.json` is in the format of `dict`.
 The differences in format could be related to the [Detectron2 Standard Dataset Dicts](https://detectron2.readthedocs.io/en/latest/tutorials/datasets.html#standard-dataset-dicts).
 >[!NOTE]
 >The format of `dict` in `train.json` is the uncompressed RLE.
 
-This repository means to convert the `train.json` uncompressed RLE annotation to a coco polygon annotation format `list[list[float]]` by our `rle_convert_2_polygon.py`.
 
 There may be some issues with the original `train.json` and `test.json` files. The primary concern is that not all images are included in the annotation files.
 You can eliminate the images not present in the JSON files using our `remove_imgs_not_in_json.py` script. However, it's alright if you don't need to do that.
